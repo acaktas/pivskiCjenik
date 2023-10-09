@@ -9,7 +9,7 @@ const MenuItems = (props: IMenuItemsProps) => {
     return <>
     <div className={classes.Container}>
         {props.items.map((item: MenuItemModel) => {
-            return <MenuItem item={item}/>
+            return <MenuItem key={item.Id} item={item}/>
         })}
     </div>
     </>
