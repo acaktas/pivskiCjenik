@@ -1,0 +1,20 @@
+#root {
+  max-width: 1280px;
+  display: flex;
+  justify-content: center;
+}
+
+.App{
+  margin-top: 60px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+
+
