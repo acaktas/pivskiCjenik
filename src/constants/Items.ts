@@ -1,14 +1,11 @@
 import {MenuItemModel} from '../models/MenuItemModel'
-import Paulaner from '../assets/Beers/paulaner.png';
-import Barba from '../assets/Beers/barba.jpg';
-import Ferata from '../assets/Beers/ferata.png';
-import Hacker from '../assets/Beers/hacker.png';
-import Heineken from '../assets/Beers/heineken.png';
-import Karlovacko from '../assets/Beers/karlovacko.png';
-import Leffe from '../assets/Beers/leffe.jpg';
-import MilaBarilo from '../assets/Beers/milabarilo.jpg';
-import Ozujsko from '../assets/Beers/ozujsko.png';
-import Trapula from '../assets/Beers/trapula.png'
+import Paulaner from '../assets/Beers/Paulaner.webp';
+import Ferata from '../assets/Beers/Ferata.webp';
+import Heineken from '../assets/Beers/Heineken.webp';
+import MilaBarilo from '../assets/Beers/Mila.webp';
+import Budwieser from '../assets/Beers/Budwieser.webp';
+import Pan from '../assets/Beers/Pan.webp';
+import Somersby from '../assets/Beers/Somersby.webp'
 
 
 export const menuItems: MenuItemModel[] = [
@@ -21,10 +18,10 @@ export const menuItems: MenuItemModel[] = [
       },
       {
         Id: "2",
-        Name: "Trapula",
+        Name: "Pan",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Trapula
+        image: Pan
       },
       {
         Id: "3",
@@ -35,10 +32,10 @@ export const menuItems: MenuItemModel[] = [
       },
       {
         Id: "4",
-        Name: "Hackerpschor",
+        Name: "Budweiser",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Hacker
+        image: Budwieser
       },
       {
         Id: "5",
@@ -56,30 +53,9 @@ export const menuItems: MenuItemModel[] = [
       },
       {
         Id: "7",
-        Name: "Barba",
+        Name: "Somersby",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Barba
-      },
-      {
-        Id: "8",
-        Name: "Leffe",
-        Price_0_3: 3.4,
-        Price_0_5: 3.4,
-        image: Leffe
-      },
-      {
-        Id: "9",
-        Name: "Ožujsko",
-        Price_0_3: 3.4,
-        Price_0_5: 3.4,
-        image: Ozujsko
-      },
-      {
-        Id: "10",
-        Name: "Karlovačko",
-        Price_0_3: 3.4,
-        Price_0_5: 3.4,
-        image: Karlovacko
-      },
+        image: Somersby
+      }
 ] 
