@@ -5,6 +5,7 @@ interface IAvatarProps {
     imageSrc: any;
 }
 
+
 const Avatar = (props: IAvatarProps):JSX.Element => {
     
     return <img src={props.imageSrc} alt="Avatar" className={classes.avatar}/>
