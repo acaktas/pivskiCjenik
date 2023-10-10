@@ -1,6 +1,6 @@
 import { MenuItemModel } from "../../models/MenuItemModel";
 import classes from "./MenuItem.module.scss";
-import Image from "../../Images/paulaner.png";
+//import Image from "../../Images/trapula.png";
 import Avatar from "../UI/Avatar";
 
 interface IMenuItemProps {
@@ -10,10 +10,11 @@ interface IMenuItemProps {
 const MenuItem = (props: IMenuItemProps) => {
   return (
     <div className={classes.Item}>
-      <Avatar imageSrc={Image} />
+      <Avatar imageSrc={props.item.image} />
       <div className={classes.itemData}>
         <div className={classes.title}>{props.item.Name}</div>
-        <div>{props.item.Price} &euro;</div>
+        <div>0.3 L: {props.item.Price_0_3} &euro;</div>
+        <div>0.5 L: {props.item.Price_0_5} &euro;</div>
       </div>
       <div></div>
     </div>

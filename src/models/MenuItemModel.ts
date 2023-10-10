@@ -2,14 +2,16 @@
 export class MenuItemModel {
     public Name: string = "";
     public Id: string = "";
-    public Price: number = 0;
+    public Price_0_3: number = 0;
+    public Price_0_5: number = 0;
     public image: string = "";
 
     constructor(model?: any){
         if(model){
             this.Name = model.Name;
             this.Id = model.Id
-            this.Price = model.Price;
+            this.Price_0_3 = model.Price_0_3;
+            this.Price_0_5 = model.Price_0_5;
             this.image = model.image;
         }
     }
