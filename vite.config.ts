@@ -28,6 +28,6 @@ export default defineConfig({
     }
   },
   //we added this for deployment
-  base: '#/pivskiCjenik/',
+  base: '/pivskiCjenik/',
   
 })
