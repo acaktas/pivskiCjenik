@@ -3,7 +3,7 @@ import { MenuItemModel } from "./models/MenuItemModel";
 import { menuItems } from "./constants/Items";
 import MenuItems from "./Components/Menu/MenuItems";
 import Login from "./Components/Admin/Login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import ActionsPage from "./Components/ActionsPage/ActionsPage";
 import "./App.css";
 
@@ -19,10 +19,10 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route
-          path="/pivskiCjenik"
+          path="/"
           element={
             <div className="background-container">
               <h1>Cjenik</h1>
@@ -33,7 +33,7 @@ function App() {
         <Route path="/pivskiCjenik/login" element={<Login/>}/>
         <Route path="/pivskiCjenik/action" element={<ActionsPage/>}/>
       </Routes>
-    </BrowserRouter>
+      </>
   );
 }
 
