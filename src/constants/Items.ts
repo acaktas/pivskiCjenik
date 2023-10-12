@@ -14,48 +14,55 @@ export const menuItems: MenuItemModel[] = [
         Name: "Paulaner",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Paulaner
+        image: Paulaner,
+        Producer: "Paulaner Brauerei"
       },
       {
         Id: "2",
         Name: "Pan",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Pan
+        image: Pan,
+        Producer: "Carlsberg Croatia"
       },
       {
         Id: "3",
         Name: "Mila Barilo",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: MilaBarilo
+        image: MilaBarilo,
+        Producer: "Pivovara Barilo"
       },
       {
         Id: "4",
         Name: "Budweiser",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Budwieser
+        image: Budwieser,
+        Producer: "Anheuser–Busch"
       },
       {
         Id: "5",
         Name: "Heineken",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Heineken
+        image: Heineken,
+        Producer: "Heineken N.V."
       },
       {
         Id: "6",
         Name: "Ferata",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Ferata
+        image: Ferata,
+        Producer: "Familia Bracera"
       },
       {
         Id: "7",
         Name: "Somersby",
         Price_0_3: 3.4,
         Price_0_5: 3.4,
-        image: Somersby
+        image: Somersby,
+        Producer: "Carlsberg Group"
       }
 ] 

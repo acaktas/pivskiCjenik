@@ -5,6 +5,7 @@ import MenuItems from "./Components/Menu/MenuItems";
 import Login from "./Components/Admin/Login";
 import {  Routes, Route } from "react-router-dom";
 import ActionsPage from "./Components/ActionsPage/ActionsPage";
+import BeerSlider from "./Components/Slider/BeerSlider";
 import "./App.css";
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
   }
 
   return (
+    <div className="App">
+          <h1 className="title">Pivkan</h1>
       <Routes>
+        
         <Route
           path="/pivskiCjenik/action"
           element={
@@ -30,8 +34,11 @@ function App() {
           }
         />
         <Route path="/pivskiCjenik/login" element={<Login/>}/>
-        <Route path="/pivskiCjenik" element={<ActionsPage/>}/>
+        <Route path="/pivskiCjenik" element={<BeerSlider beers={items}/>}/>
+        <Route path="/pivskiCjenik/slider" element={<ActionsPage/>}/>
+        
       </Routes>
+      </div>
   );
 }
 

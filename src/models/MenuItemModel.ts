@@ -5,6 +5,7 @@ export class MenuItemModel {
     public Price_0_3: number = 0;
     public Price_0_5: number = 0;
     public image: string = "";
+    public Producer: string = "";
 
     constructor(model?: any){
         if(model){
@@ -13,6 +14,7 @@ export class MenuItemModel {
             this.Price_0_3 = model.Price_0_3;
             this.Price_0_5 = model.Price_0_5;
             this.image = model.image;
+            this.Producer = model.Producer;
         }
     }
 

@@ -1,21 +1,17 @@
-#root {
-  display: flex;
-  justify-content: center;
+.App {
+  max-width: 1250px;
+  width: 100vh;
+  height: 90vh;
+  margin: 0 auto;
+}
+
+#root{
   height: 100%;
   width: 100%;
 }
 
-.App{
-  margin-top: 60px;
-}
-
-h1 {
-  color: white;
+.title {
   text-align: center;
-  font-weight: bold;
+  color: white;
   font-style: italic;
 }
-
-
-
-
