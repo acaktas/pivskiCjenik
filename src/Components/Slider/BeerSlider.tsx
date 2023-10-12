@@ -70,7 +70,7 @@ const BeerSlider = (props: BeerSliderProps) => {
                     <div>
                       <img
                         src={item.image}
-                        style={{ height: "650px", width: "380px" }}
+                        style={{ height: "80%", width: "380px" }}
                       />
                     </div>
                     <div className={classes.description}>
