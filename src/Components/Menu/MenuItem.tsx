@@ -10,7 +10,9 @@ interface IMenuItemProps {
 const MenuItem = (props: IMenuItemProps) => {
   return (
     <div className={classes.Item}>
-      <Avatar imageSrc={props.item.image} />
+      <div>
+        <Avatar imageSrc={props.item.image} />
+      </div>
       <div className={classes.itemData}>
         <div className={classes.title}>{props.item.Name}</div>
         <div>0.3 L: {props.item.Price_0_3} &euro;</div>

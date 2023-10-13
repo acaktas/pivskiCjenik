@@ -25,7 +25,7 @@ function App() {
       <Routes>
         
         <Route
-          path="/pivskiCjenik/action"
+          path="/pivskiCjenik"
           element={
             <div className="background-container">
               <h1>Cjenik</h1>
@@ -34,8 +34,8 @@ function App() {
           }
         />
         <Route path="/pivskiCjenik/login" element={<Login/>}/>
-        <Route path="/pivskiCjenik" element={<BeerSlider beers={items}/>}/>
-        <Route path="/pivskiCjenik/slider" element={<ActionsPage/>}/>
+        <Route path="/pivskiCjenik/slider" element={<BeerSlider beers={items}/>}/>
+        <Route path="/pivskiCjenik/action" element={<ActionsPage/>}/>
         
       </Routes>
       </div>

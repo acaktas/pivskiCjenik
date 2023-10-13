@@ -65,13 +65,16 @@ const BeerSlider = (props: BeerSliderProps) => {
                 className={classes.beerSlider}
                 style={{ translate: `${-100 * beerMinIndex}%` }}
               >
-                <div>
                   <div className={classes.beerItem}>
                     <div>
                       <img
                         src={item.image}
-                        style={{ height: "80%", width: "380px" }}
+                        className={classes.articleImage}
+                        // style={{ height: "600px", width: "350px" }}
                       />
+                    </div>
+                    <div className={classes.circle}>
+                      0.5L/{item.Price_0_5}
                     </div>
                     <div className={classes.description}>
                       <h1 className={classes.beerTitle}>{item.Name}</h1>
@@ -83,7 +86,6 @@ const BeerSlider = (props: BeerSliderProps) => {
                       <div></div>
                     </div>
                   </div>
-                </div>
               </div>
             );
           })}

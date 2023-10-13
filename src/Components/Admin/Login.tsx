@@ -6,6 +6,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [mail,setMail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
+    const [isValid, setIsValid] = useState<boolean>(true)
 
     const mailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setMail(e.target.value)
@@ -21,7 +22,7 @@ const Login = () => {
 
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d).+$/;
         const passIsValid = passwordRegex.test(password);
-
+        setIsValid(mailIsValid && passIsValid)
         return mailIsValid && passIsValid;
     }
 
@@ -41,6 +42,7 @@ const Login = () => {
             <input type='text' id='mail' value={mail} onChange={(e)=>mailHandler(e)}/><br/>
             <label htmlFor='pass'>Password</label><br/>
             <input type='password' id='pass' value={password} onChange={(e)=>passwordHandler(e)}/>
+            {!isValid && <div className={classes.errorMessage}>Invalid password or email address!</div>}
         </div>
         <button type='submit'>Login</button>
         </form>

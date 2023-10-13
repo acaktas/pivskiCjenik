@@ -5,12 +5,13 @@
 .sliderDiv {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100vh;
     height: 100%;
     justify-content: center;
 }
 
 .beerSlider {
+    margin-top: 130px;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -25,9 +26,15 @@
 .beerItem {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
+.articleImage {
+    height: 70%;
+    width: 100%
+}
 .data{
     color: white;
     font-weight: bold;
@@ -37,6 +44,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 3px solid rgb(57, 91, 100,0.8);
+    background-color: rgb(57, 91, 100,0.8);
+    position: relative;
+    right: 0;
+    top: 15%;
+    border-radius: 10px;
+    max-height: 25%;
+    padding: 0 50px;
     margin-top: 10%;
 }
 
@@ -69,6 +84,23 @@
 
 .beerTitle {
     //padding-left: 50%;
+    font-size: xx-large;
     color: white;
 }
+
+.circle {
+    width: 200px; /* Set the desired width and height for your circle */
+    height: 200px;
+    background-color: red; /* Background color of the circle */
+    color: white; /* Text color */
+    border-radius: 50%; /* Make it a circle by setting border-radius to 50% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 40%;
+    top: 65%;
+    font-size: 40px; /* Adjust font size as needed */
+    font-weight: bold; /* Bold text for emphasis */
+  }
 
