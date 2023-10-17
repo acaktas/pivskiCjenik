@@ -1,12 +1,20 @@
 import { useState } from 'react';
 import classes from './Login.module.scss'
 import {useNavigate} from 'react-router-dom'
+import { users } from '../../constants/Users';
+import { UserModel } from '../../models/UserModel';
 
-const Login = () => {
+type LoginProps = {
+    session: string | null;
+    setSession: (id?: string) => void;
+}
+
+const Login = (props: LoginProps) => {
     const navigate = useNavigate();
     const [mail,setMail] = useState<string>("");
     const [password, setPassword] = useState<string>("");
-    const [isValid, setIsValid] = useState<boolean>(true)
+    const [isValid, setIsValid] = useState<boolean>(true);
+    const [errorMessage, setErrorMessage] = useState<string>("");
 
     const mailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         setMail(e.target.value)
@@ -22,13 +30,22 @@ const Login = () => {
 
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d).+$/;
         const passIsValid = passwordRegex.test(password);
-        setIsValid(mailIsValid && passIsValid)
-        return mailIsValid && passIsValid;
+        const filterResult: UserModel[] = users.filter((user: UserModel) => user.email === mail && user.password === password)
+        setIsValid(mailIsValid && passIsValid && filterResult.length !== 0)
+        if(!mailIsValid){
+            setErrorMessage("Invalid email addres! Please try again.")
+        }else if(!passIsValid){
+            setErrorMessage("Invalid password! Please try again.")
+        }else if(filterResult.length === 0){
+            setErrorMessage("User doesn't exist! Go to registration form to create account!")
+        }
+        return mailIsValid && passIsValid && filterResult.length !== 0;
     }
 
     const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if(isFormValid()){
+            props.setSession("123456")
             navigate('/')
         }else{
             console.log("Wrong input!")
@@ -42,8 +59,8 @@ const Login = () => {
             <input type='text' id='mail' value={mail} onChange={(e)=>mailHandler(e)}/><br/>
             <label htmlFor='pass'>Password</label><br/>
             <input type='password' id='pass' value={password} onChange={(e)=>passwordHandler(e)}/>
-            {!isValid && <div className={classes.errorMessage}>Invalid password or email address!</div>}
         </div>
+        {!isValid && <div className={classes.errorMessage}>{errorMessage}</div>}
         <button type='submit'>Login</button>
         </form>
     </div>
