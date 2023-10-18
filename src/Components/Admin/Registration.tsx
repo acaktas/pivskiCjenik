@@ -2,15 +2,15 @@ import { UserModel } from "../../models/UserModel";
 import classes from "./Registration.module.scss";
 import { useState } from "react";
 import { users } from "../../constants/Users";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 interface RegistrationProps {
-    session: string | null;
-    setSession: (id?:string) => void
+  session: string | null;
+  setSession: (id?: string) => void;
 }
 
 const Registration = (props: RegistrationProps) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const [mail, setMail] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -65,19 +65,19 @@ const Registration = (props: RegistrationProps) => {
 
   const onSubmitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if(isFormValid()){
-        props.setSession("123456")
-        navigate('/')
-    }else{
-        console.log("Wrong input!")
+    if (isFormValid()) {
+      props.setSession("123456");
+      navigate("/");
+    } else {
+      console.log("Wrong input!");
     }
-}
+  };
 
   return (
     <div className={classes.Container}>
       <h1>Register</h1>
       <br />
-      <form onSubmit={(e)=>onSubmitHandler(e)}>
+      <form onSubmit={(e) => onSubmitHandler(e)}>
         <div>
           <label htmlFor="name">Name:</label>
           <br />
